@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ryan Shavell | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Open Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+          rel="stylesheet">
+
+    <script src="js/jquery.visible.js"></script>
+</head>
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .portrait {
+        width: 150px;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .picture {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+        min-height: 217px;
+    }
+
+    .card-img-top {
+        height: 150px !important;
+    }
+
+    .padding-bottom {
+        padding-bottom: 16px;
+    }
+
+    .techrangers-picture {
+        background-image: url("media/techrangers.png");
+    }
+
+    .fa-picture {
+        background-image: url("media/fa.png");
+    }
+
+    .stratsy-picture {
+        background-image: url("media/stratsy.png");
+    }
+
+    .sim-picture {
+        background-image: url("media/sim.png");
+    }
+
+    .sim-picture {
+        background-image: url("media/sim.png");
+    }
+
+    .opentale-picture {
+        background-image: url("media/open-crop.png");
+    }
+
+    .come-in {
+        transform: translateX(-300px);
+        animation: come-in 0.8s ease forwards, fadeIn ease 0.8s;
+    }
+
+    .already-visible {
+        transform: translateX(0);
+        animation: none;
+    }
+
+    .come-in:nth-child(odd) {
+        animation-duration: 0.6s;
+    }
+
+    @keyframes come-in {
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+<script>
+    var win = $(window);
+    var allMods = null;
+
+    $(document).ready(function () {
+        allMods = $(".module");
+        // Already visible modules
+        allMods.each(function (i, el) {
+            var el = $(el);
+            if (el.visible(true)) {
+                el.addClass("already-visible");
+            }
+        });
+    });
+
+    win.scroll(function (event) {
+
+        allMods.each(function (i, el) {
+            var el = $(el);
+            if (el.visible(true)) {
+                el.addClass("come-in");
+            }
+        });
+    });
+</script>
+
+<header>
+<div class="bg-primary" style="border-bottom: 4px solid rgba(0,0,0,0.2);">
+    <div class="container">
+        </br>
+        <div class="text-center text-white">
+            <img class="rounded-circle portrait" src="media/portrait_crop.jpg" alt="A picture of me!">
+            <h2 class="text-center text-white"><strong>RYAN SHAVELL</strong></h2>
+            <h5><a class="text-white" href="mailto:ryan.shavell@gmail.com">ryan.shavell@gmail.com</a> | 352-702-5045
+            </h5>
+            <br>
+        </div>
+
+    </div>
+</div>
+</header>
+<div class="container">
+   </br><!--
+    <div class="row text-muted">
+        <div class="col-md-4 offset-lg-1 col-lg-2 text-center"><h3><strong>JAVA</strong></h3></div>
+        <div class="col-md-4 col-lg-2 text-center"><h3><strong>PYTHON</strong></h3></div>
+        <div class="col-md-4 col-lg-2 text-center"><h3><strong>C#</strong></h3></div>
+        <div class="col-md-6 col-lg-2 text-center"><h3><strong>UNITY</strong></h3></div>
+        <div class="col-md-6 col-lg-2 text-center"><h3><strong>MOBILE</strong></h3></div>
+    </div>
+    <hr>-->
+    <br><br>
+    <div class="row">
+        <div class="offset-2 col-8 text-center">
+            <h5>
+                I'm a Computer Science major at the University of Central Florida! I got my start programming when I was 10 years old - now, I've written code for video
+                games, mobile apps, websites,
+                desktop applications, robots, and more! I particularly enjoy writing software that helps other people -
+                and in my free time,
+                making things that let other people have fun is a big plus. I want to make a difference in the world with the projects that I work on.
+                <br><br>
+                I'm a pretty multi-purpose programmer with experience in a lot of areas, but I specialize in front and back-end web development.
+            </h5>
+        </div>
+    </div>
+    <br><br><br><br>
+    <h2 class="text-center"><strong>EXPERIENCE</strong></h2>
+    <hr>
+    <br>
+    <div class="row module">
+        <div class="col-12 col-md-6">
+            <h5>
+                <strong>UCF Techrangers</strong> | <span class="badge badge-success">WORK</span><br>
+                <small class="text-muted">Python | Django | HTML | CSS | Accessibility</small>
+            </h5>
+            <p>I currently work part-time for the Center of Distributed Learning at UCF, on a team called the
+                Techrangers!
+                <a target="_blank" href="https://techrangers.cdl.ucf.edu/techrangers_current/ryan_shavell.html">See my techrangers bio here.</a></p>
+        </div>
+        <div class="col-12 offset-md-1 col-md-5 rounded picture techrangers-picture">
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="row module">
+        <div class="order-md-2 col-12 offset-md-1 col-md-6">
+            <h5>
+                <strong>FIRSTAlliances.org</strong> | <span class="badge badge-primary">PROJECT</span><br>
+                <small class="text-muted">Python | Django | Bootstrap | HTML | CSS</small>
+            </h5>
+            <p>A custom-built website that I led development on, which houses a crowd-sourced robotics team directory.
+                Frontend was written from the ground-up - with no starting template - in Bootstrap and REACT. The
+                backend,
+                handling services such as sign up and searching, is powered by Django and a MySQL database.</p>
+        </div>
+        <div class="col-12 order-md-1 col-md-5 bg-secondary rounded picture fa-picture">
+
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="row module">
+        <div class="col-12 col-md-6">
+            <h5>
+                <strong>Stratsy.IO</strong> | <span class="badge badge-primary">PROJECT</span><br>
+                <small class="text-muted">Unity | C# | Websockets | Django</small>
+            </h5>
+            <p>An online, multi-player strategy game I developed in most of April. The game is made in Unity, utilizing
+                plenty of custom C# code for the game logic and behavior. The site the game is embedded in is a
+                straightforward
+                Django site with a SQLite database for handling user accounts. The game is available online
+                and is free to play -  and a mobile version for Android and iOS is coming soon!</p>
+        </div>
+        <div class="col-12 offset-md-1 col-md-5 rounded picture stratsy-picture">
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="row module">
+        <div class="order-md-2 col-12 offset-md-1 col-md-6">
+            <h5>
+                <strong>FRC Simulator</strong> | <span class="badge badge-primary">PROJECT</span><br>
+                <small class="text-muted">Java | LibGDX</small>
+            </h5>
+            <p>Robot simulation & driver practice software I wrote for the FIRST Robotics Competition. Java robot code could
+            be simulated on a virtual robot to aid with testing robot code long before a physical robot was available,
+            and the FRC game could be played in full to allow for development and refinement of match strategies. Also
+            doubled as a fun 6 player game!</p>
+        </div>
+        <div class="col-12 order-md-1 col-md-5 bg-secondary rounded picture sim-picture">
+
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="row module">
+        <div class="col-12 col-md-6">
+            <h5>
+                <strong>OpenTale</strong> | <span class="badge badge-primary">PROJECT</span><br>
+                <small class="text-muted">Java | LUA</small>
+            </h5>
+            <p>A complete recreation of UNDERTALE's battle engine in Java. UNDERTALE is one of my favorite
+                all time games, and I thought it would be a fun experiment to see if I could completely recreate
+                it's battle engine - which was originally made in GameMaker - in Java with no additional libraries or
+                game frameworks. The experiment was a success, and I even added support for writing your own attacks
+                via LUA files.
+            </p>
+        </div>
+        <div class="col-12 offset-md-1 col-md-5 rounded picture opentale-picture">
+        </div>
+    </div>
+    <br>
+    <hr><br>
+    <h2 class="text-center"><strong>SKILLS</strong></h2>
+    <br>
+    <div class="row text-muted">
+        <div class="col-md-4 offset-lg-1 col-lg-2 text-center"><h3><strong>JAVA</strong></h3></div>
+        <div class="col-md-4 col-lg-2 text-center"><h3><strong>PYTHON</strong></h3></div>
+        <div class="col-md-4 col-lg-2 text-center"><h3><strong>C#</strong></h3></div>
+        <div class="col-md-6 col-lg-2 text-center"><h3><strong>UNITY</strong></h3></div>
+        <div class="col-md-6 col-lg-2 text-center"><h3><strong>MOBILE</strong></h3></div>
+    </div>
+    <br>
+    <div class="row text-muted">
+        <div class="col-md-4 offset-lg-2 col-lg-2 text-center"><h3><strong>CSS</strong></h3></div>
+        <div class="col-md-4 col-lg-2 text-center"><h3><strong>JAVASCRIPT</strong></h3></div>
+        <div class="col-md-6 col-lg-2 text-center"><h3><strong>DJANGO</strong></h3></div>
+        <div class="col-md-6 col-lg-2 text-center"><h3><strong>HTML</strong></h3></div>
+    </div>
+    <br>
+    <hr>
+    <br><br>
+    <h2 class="font-weight-bold text-center">INTERESTS & HOBBIES</h2>
+    <br><br>
+    <div class="row module">
+        <div class="col-4 text-center">
+            <h5><strong>FIRST Robotics Competition</strong></h5>
+            Alumni, Mentor
+        </div>
+        <div class="col-4 text-center">
+            <h5><strong>Game Development</strong></h5>
+            Been making small games since 2011!
+        </div>
+        <div class="col-4 text-center">
+            <h5><strong>Piano</strong></h5>
+            Keeps the creative energy going!
+        </div>
+    </div>
+    <br><br>
+    <div class="row module">
+        <div class="col-4 text-center">
+            <h5><strong>Knights FIRST</strong></h5>
+            UCF Club - Vice President
+        </div>
+        <div class="col-4 text-center">
+            <h5><strong>Combat Robots</strong></h5>
+            Typically competing at the 1lb level
+        </div>
+        <div class="col-4 text-center">
+            <h5><strong>3D Printing</strong></h5>
+            Programmers making real world objects! Scary, I know
+        </div>
+    </div>
+    <hr>
+    <br><br>
+</div>
+<div class="container">
+    <h2 class="font-weight-bold text-center">RESOURCES</h2>
+    <br>
+    <div class="row module">
+        <div class="col-12 col-md-6 col-lg-4 padding-bottom">
+            <div class="card">
+                <img class="card-img-top" src="media/fa.png" alt="Front-page of FIRSTAlliances.org">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <del>FIRSTAlliances.org</del>
+                    </h5>
+                    <p class="card-text"><i>(hosted by another party, currently offline)</i></p>
+                    <a href="https://firstalliances.org" target="_blank" class="btn btn-primary">Visit
+                        FIRSTAlliances</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 padding-bottom">
+            <div class="card">
+                <img class="card-img-top" src="media/stratsy.png" alt="Screenshot of Stratsy">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Stratsy.IO</h5>
+                    <a href="https://stratsy.io" target="_blank" class="btn btn-primary">Play Stratsy</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 padding-bottom">
+            <div class="card">
+                <img class="card-img-top" src="media/sim.png" alt="Screenshot of the FRC Simulator">
+                <div class="card-body text-center">
+                    <h5 class="card-title">FRC Simulator</h5>
+                    <a href="https://github.com/Ornamus/RobotDriveSimGDX" target="_blank" class="btn btn-primary">View Repository</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-12 col-md-6 col-lg-4 offset-lg-2 padding-bottom">
+            <div class="card">
+                <img class="card-img-top" src="media/open-crop.png" alt="Screenshot of OpenTale">
+                <div class="card-body text-center">
+                    <h5 class="card-title">OpenTale</h5>
+                    <a href="https://github.com/Ornamus/OpenTale" target="_blank" class="btn btn-primary">View Repository</a>
+                    <a href="https://youtu.be/mxpi8eY1xK0" target="_blank" class="btn btn-primary">See Video</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 padding-bottom">
+            <div class="card">
+            <a class="twitter-timeline" data-height="300" href="https://twitter.com/RyanShavell?ref_src=twsrc%5Etfw">Tweets by RyanShavell</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <hr>
+        <br>
+        <div class="text-center">
+            <a href="mailto:ryan.shavell@gmail.com">ryan.shavell@gmail.com</a> | 352-702-5045
+        </div>
+        <br>
+    </footer>
+</div>
+</body>
+</html>
